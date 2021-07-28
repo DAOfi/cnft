@@ -1,0 +1,54 @@
+{
+  "name": "cnft",
+  "description": "$CNFT ERC20 Token",
+  "version": "1.0.0",
+  "homepage": "https://communifty.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DAOfi/cnft"
+  },
+  "keywords": [
+    "daofi",
+    "communifty",
+    "ethereum",
+    "nft",
+    "erc20"
+  ],
+  "files": [
+    "artifacts",
+    "contracts"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.0",
+    "@nomiclabs/hardhat-waffle": "2.0.0",
+    "@openzeppelin/contracts": "3.4.1-solc-0.7",
+    "@types/chai": "4.2.14",
+    "@types/mocha": "8.0.4",
+    "@types/node": "14.14.9",
+    "chai": "4.2.0",
+    "ethereum-waffle": "3.2.0",
+    "ethereumjs-util": "7.0.7",
+    "ethers": "5.0.21",
+    "hardhat": "2.0.3",
+    "mocha": "8.2.1",
+    "prettier": "2.2.0",
+    "rimraf": "3.0.2",
+    "ts-node": "9.0.0",
+    "typescript": "4.1.2"
+  },
+  "scripts": {
+    "lint": "yarn prettier ./test/*.ts --check",
+    "lint:fix": "yarn prettier ./test/*.ts --write",
+    "clean": "rimraf ./build/",
+    "precompile": "yarn clean",
+    "compile": "npx hardhat compile",
+    "pretest": "yarn compile",
+    "test": "npx hardhat test",
+    "prepublishOnly": "yarn test",
+    "deploy": "ts-node scripts/deploy.ts"
+  },
+  "license": "GPL-3.0-or-later"
+}
