@@ -1,5 +1,4 @@
-import { ethers } from 'hardhat'
-import { BigNumber } from 'ethers'
+import { ethers, BigNumber } from 'ethers'
 
 export function expandTo18Decimals(n: number): BigNumber {
   return expandToDecimals(n, 18)
