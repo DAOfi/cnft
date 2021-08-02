@@ -11,7 +11,7 @@ let wallet: SignerWithAddress
 
 describe('CNFT ERC20 Token', () => {
   beforeEach(async () => {
-    CNFT = await ethers.getContractFactory("CNFT")
+    CNFT = await ethers.getContractFactory('CNFT')
     wallet = (await ethers.getSigners())[0]
   })
 
