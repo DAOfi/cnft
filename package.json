@@ -42,8 +42,8 @@
   },
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",
-    "lint:fix": "yarn prettier ./test/*.ts --write",
-    "clean": "rimraf ./artifacts ./cache",
+    "lint:fix": "yarn prettier ./test/*.ts ./scripts/*.ts --write",
+    "clean": "rimraf ./artifacts",
     "precompile": "yarn clean",
     "compile": "npx hardhat compile",
     "pretest": "yarn compile",
